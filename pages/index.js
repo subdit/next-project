@@ -12,6 +12,11 @@ function Homepage() {
       </Head>
       <main>
         <h2>My blog Home Page build by Next.js.!</h2>
+        <ul>
+          <li>
+            <Link href='/post/first-post'>First Post</Link>
+          </li>
+        </ul>
       </main>
     </>
   );
