@@ -1,11 +1,5 @@
-import { readFile } from 'fs/promises';
+import { getPost } from '../../lib/posts';
 import Head from 'next/head';
-
-// slug is a read file specific loading only a first post
-async function getPost(slug) {
-  const data = await readFile(`contents/posts/${slug}.json`, 'utf8');
-  return JSON.parse(data);
-}
 
 // using async to loading data and return as a object to call for callback to getStaticProps function.
 export async function getStaticProps() {
