@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
-  console.log('[App] rendering');
+  // console.log('[App] rendering');
   return (
     <>
       <Head>
