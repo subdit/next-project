@@ -1,5 +1,5 @@
+import Head from 'next/head';
 import Link from 'next/link';
-import Head from 'next/head'; // add Head element as a page title and add Meta tag for the search engine.
 import { getPosts } from '../lib/posts';
 
 export async function getStaticProps() {
@@ -9,23 +9,25 @@ export async function getStaticProps() {
   };
 }
 
-function Homepage(props) {
-  console.log('[HomePage] render:', props);
+function HomePage({ posts }) {
+  console.log('[HomePage] render:', posts);
   return (
     <>
       <Head>
         <title>My Blog</title>
-        <meta name='decriptiton' value='This is my blog' />
       </Head>
       <main>
-        <h2>My blog Home Page build by Next.js.!</h2>
+        <h1>My Blog</h1>
         <ul>
-          <li>
-            <Link href='./posts/{slug}'>First Post</Link>
-          </li>
+          {posts.map(post => (
+            <li key={post.slug}>
+              <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+            </li>
+          ))}
         </ul>
       </main>
     </>
   );
 }
-export default Homepage;
+
+export default HomePage;

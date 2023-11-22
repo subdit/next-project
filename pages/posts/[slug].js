@@ -4,9 +4,10 @@ import Head from 'next/head';
 export async function getStaticPaths() {
   const slugs = await getSlugs();
   return {
-    paths: slugs.map(slug => ({
-      params: { slug }
-    })),
+    paths: [
+      { params: { slug: 'first-post' } },
+      { params: { slug: 'second-post' } }
+    ],
     fallback: false
   };
 }
@@ -26,7 +27,7 @@ function PostPage({ post }) {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{`${post.title} - My Blog`}</title>
         <meta name='description' value='first post'></meta>
       </Head>
       <main>
