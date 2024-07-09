@@ -1,3 +1,3 @@
-# Next-Project with React
+# Next.js project
 
-Technology use: Next.js and React
+Technology use: Next.js
