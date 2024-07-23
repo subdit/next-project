@@ -1,4 +1,4 @@
-import performanceImg from '../../../public/performance_2.jpg';
+import performanceImg from '../../../public/performace_3.jpg';
 import Hero from '@/components/hero';
 
 export default function PerformancePage() {
@@ -6,7 +6,7 @@ export default function PerformancePage() {
     <Hero
       imgData={performanceImg}
       imgAlt='welding'
-      title='We serve high performance hosting applications'
+      title='We serve high performance cloud'
     />
   );
 }

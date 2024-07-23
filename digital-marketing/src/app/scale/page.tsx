@@ -1,8 +1,12 @@
-import scaleImg from '../../../public/scalability.jpg';
+import scaleImg from '../../../public/Scalability_3.jpg';
 import Hero from '@/components/hero';
 
 export default function ScaleImg() {
   return (
-    <Hero imgData={scaleImg} imgAlt='welding' title='Scalability on demand ' />
+    <Hero
+      imgData={scaleImg}
+      imgAlt='Scal cloud'
+      title='Scalability on demand '
+    />
   );
 }
